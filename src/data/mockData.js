@@ -138,3 +138,33 @@ export const pollData = {
         { id: 'b', label: "No, markets will adapt", votes: 55 }
     ]
 };
+
+export const researchPapers = [
+    {
+        id: 101,
+        title: "The Future of Work in a Digital Economy",
+        summary: "In this contribution, a leading economist discusses the transformational changes in the workplace brought about by digital technologies.",
+        tags: ["Labor Economics", "Digital Transformation"],
+        author: "Leading Economist",
+        date: "Feb 2026",
+        readTime: "10 min read"
+    },
+    {
+        id: 102,
+        title: "Policy Responses to Economic Crises",
+        summary: "A seasoned policy analyst shares their perspective on effective strategies for handling economic downturns.",
+        tags: ["Fiscal Policy", "Crisis Management"],
+        author: "Seasoned Policy Analyst",
+        date: "Jan 2026",
+        readTime: "15 min read"
+    },
+    {
+        id: 103,
+        title: "Sustainable Development Goals and Economic Growth",
+        summary: "An environmental economist explores the relationship between sustainable development goals and economic growth.",
+        tags: ["Sustainability", "Development"],
+        author: "Environmental Economist",
+        date: "Jan 2026",
+        readTime: "12 min read"
+    }
+];
