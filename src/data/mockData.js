@@ -81,7 +81,8 @@ export const voicesArticles = [
         author: "Irada Hasanli",
         date: "Jan 2026",
         readTime: "20 min read",
-        image: "https://images.unsplash.com/photo-1565514020125-61266b746fb9?q=80&w=2070&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1565514020125-61266b746fb9?q=80&w=2070&auto=format&fit=crop",
+        downloadLink: "/src/assets/docs/IRAHAS_EE.docx"
     }
 ];
 

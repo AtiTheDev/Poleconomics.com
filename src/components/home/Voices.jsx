@@ -26,6 +26,13 @@ const Voices = () => {
                                         Read More <ArrowRight size={16} />
                                     </a>
                                 </div>
+                                {article.downloadLink && (
+                                    <div style={{ marginTop: 'var(--space-md)', paddingTop: 'var(--space-sm)', borderTop: '1px solid #eee' }}>
+                                        <a href={article.downloadLink} download style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--color-text-muted)', fontSize: '0.85rem', textDecoration: 'none' }}>
+                                            <Download size={14} /> Download Full Paper
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
