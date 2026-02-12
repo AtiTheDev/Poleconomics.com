@@ -5,7 +5,20 @@ export const featuredStory = {
     category: "Political Economy",
     image: "https://images.unsplash.com/photo-1571609549239-bf07fb79f702?q=80&w=2070&auto=format&fit=crop",
     author: "Poleconomics Team",
-    date: "Feb 10, 2026"
+    date: "Feb 10, 2026",
+    fullText: `
+    **Election Impacts on Financial Markets**
+
+    As the election cycle heats up, investors are keenly watching the polls. Historical data suggests that volatility tends to spike in the month preceding major elections. However, long-term market trends are often more influenced by economic fundamentals than political outcomes.
+
+    **Key Sectors to Watch**
+    
+    Energy, healthcare, and financials are typically the most sensitive to policy changes. Our analysis looks at past election cycles to predict potential winners and losers in the coming months.
+
+    **Investor Sentiment**
+
+    Market sentiment is currently cautious, with many investors sitting on the sidelines until a clearer picture emerges. We recommend a diversified portfolio to hedge against political uncertainty.
+    `
 };
 
 export const secondaryStory = {
@@ -15,7 +28,20 @@ export const secondaryStory = {
     category: "Social Economics",
     image: "https://images.unsplash.com/photo-1605218427306-633ba87c9711?q=80&w=2069&auto=format&fit=crop",
     author: "Poleconomics Team",
-    date: "Feb 08, 2026"
+    date: "Feb 08, 2026",
+    fullText: `
+    **Deconstructing Economic Inequality**
+
+    Wealth disparity remains a critical issue in modern economics. This article examines the drivers of the Gini coefficient, from tax policy to educational access.
+
+    **The Role of Education**
+    
+    Access to quality education is one of the most significant factors in economic mobility. We analyze data from OECD countries to show the correlation between educational investment and income equality.
+
+    **Policy Recommendations**
+
+    We propose a multi-faceted approach to addressing inequality, including progressive taxation, investment in public services, and labor market reforms.
+    `
 };
 
 export const newsItems = [
