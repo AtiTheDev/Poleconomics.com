@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Download } from 'lucide-react';
 import { voicesArticles } from '../../data/mockData';
 
@@ -22,9 +23,9 @@ const Voices = () => {
                                 </p>
                                 <div className="flex items-center justify-between" style={{ marginTop: 'auto' }}>
                                     <span style={{ fontSize: '0.85rem', color: 'var(--color-secondary)', fontWeight: 600 }}>{article.author}</span>
-                                    <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.9rem' }}>
+                                    <Link to={`/research/${article.id}`} style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none' }}>
                                         Read More <ArrowRight size={16} />
-                                    </a>
+                                    </Link>
                                 </div>
                                 {article.downloadLink && (
                                     <div style={{ marginTop: 'var(--space-md)', paddingTop: 'var(--space-sm)', borderTop: '1px solid #eee' }}>

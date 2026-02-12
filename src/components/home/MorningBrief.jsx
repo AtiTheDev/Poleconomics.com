@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Coffee, ArrowRight } from 'lucide-react';
 
 const MorningBrief = () => {
@@ -28,20 +29,22 @@ const MorningBrief = () => {
                     <li style={{ marginBottom: '0.5rem' }}><strong>Oil Jitters:</strong> Brent crude stabilizes near $90/bbl on Middle East tensions.</li>
                 </ul>
 
-                <button style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    backgroundColor: 'transparent',
-                    color: 'var(--color-primary)',
-                    border: '2px solid var(--color-primary)',
-                    padding: '0.5rem 1rem',
-                    borderRadius: 'var(--radius-sm)',
-                    fontWeight: 600,
-                    cursor: 'pointer'
-                }}>
-                    Read Full Briefing <ArrowRight size={16} />
-                </button>
+                <Link to="/research/morning-brief" style={{ textDecoration: 'none' }}>
+                    <button style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        backgroundColor: 'transparent',
+                        color: 'var(--color-primary)',
+                        border: '2px solid var(--color-primary)',
+                        padding: '0.5rem 1rem',
+                        borderRadius: 'var(--radius-sm)',
+                        fontWeight: 600,
+                        cursor: 'pointer'
+                    }}>
+                        Read Full Briefing <ArrowRight size={16} />
+                    </button>
+                </Link>
             </div>
 
             {/* Decorative background element */}

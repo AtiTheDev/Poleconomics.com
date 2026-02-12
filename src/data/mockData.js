@@ -141,6 +141,29 @@ export const pollData = {
 
 export const researchPapers = [
     {
+        id: 'morning-brief',
+        title: "Morning Brief: Global Markets Rattle",
+        summary: "US Treasury yields have hit a significantly high level, rattling global equity markets. Meanwhile, the Eurozone faces a deepening manufacturing contraction.",
+        tags: ["Market Intelligence", "Daily Brief"],
+        author: "Editorial Team",
+        date: "Today",
+        readTime: "5 min read",
+        fullText: `
+        **Global Markets Rattle as US Treasury Yields Surge**
+
+        US Treasury yields have hit a significantly high level, breaching 5% on the 10-year note for the first time since 2007. This surge has sent shockwaves through global equity markets, as higher yields reduce the attractiveness of stocks and increase borrowing costs for businesses and consumers alike.
+
+        **Eurozone Manufacturing Contraction Deepens**
+        
+        Meanwhile, in Europe, the latest PMI data suggests a deepening contraction in the manufacturing sector. Germany, the continent's industrial powerhouse, is showing signs of prolonged weakness, raising fears of a recession in the Eurozone.
+
+        **Oil Markets remain Volatile**
+        
+        Brent crude prices have stabilized near $90/bbl, but traders remain on edge due to escalating tensions in the Middle East. Any disruption to supply routes could send prices soaring again, complicating central banks' fight against inflation.
+        `,
+        image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
         id: 'ee-irada',
         title: "The Impact of Economic Sanctions on Russian People",
         summary: "An in-depth analysis of how international sanctions have affected the daily lives, economy, and political landscape of Russia.",
