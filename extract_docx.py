@@ -34,4 +34,12 @@ def get_docx_text(path):
     except Exception as e:
         return str(e)
 
-print(get_docx_text(r'c:\Users\user\Desktop\Project GD\src\assets\docs\IRAHAS_EE.docx'))
+if __name__ == "__main__":
+    import sys
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except AttributeError:
+        pass # Python < 3.7
+    
+    text = get_docx_text(r'c:\Users\user\Desktop\Project GD\src\assets\docs\IRAHAS_EE.docx')
+    print(text)

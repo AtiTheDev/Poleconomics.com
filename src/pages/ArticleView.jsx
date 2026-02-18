@@ -1,23 +1,26 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { researchPapers, featuredStory, secondaryStory, voicesArticles } from '../data/mockData';
+import { researchPapers, featuredStory, secondaryStory, voicesArticles, newsItems } from '../data/mockData';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const ArticleView = () => {
     const { id } = useParams();
+    const { language } = useLanguage();
 
     // Combine all potential data sources
     const allContent = [
         ...researchPapers,
         ...voicesArticles,
+        ...newsItems,
         featuredStory,
         secondaryStory
     ];
 
-    // Simple lookup (converting id to string for comparison)
-    const article = allContent.find(item => item.id.toString() === id);
+    // Find the item first (it has ID and localized data objects)
+    const item = allContent.find(item => item.id.toString() === id);
 
-    if (!article) {
+    if (!item) {
         return (
             <div className="container" style={{ padding: 'var(--space-2xl) 0', textAlign: 'center' }}>
                 <h2>Article not found</h2>
@@ -25,6 +28,14 @@ const ArticleView = () => {
             </div>
         );
     }
+
+    // Now get the specific language content, fallback to 'en' if missing
+    const article = item[language] || item['en'];
+    // Properties like image, author might be on the top level item or inside the language object depending on data structure
+    // In our current structure: image, author, id are top level. title, summary, etc are inside language.
+    const image = item.image || article.image;
+    const author = item.author || article.author;
+
 
     return (
         <div className="article-page container" style={{ padding: 'var(--space-xl) var(--space-md)', maxWidth: '800px' }}>
@@ -44,7 +55,7 @@ const ArticleView = () => {
                     <div className="flex items-center gap-md">
                         <div className="flex items-center gap-xs" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
                             <User size={16} />
-                            <span style={{ fontWeight: 600, color: 'var(--color-text-main)' }}>{article.author}</span>
+                            <span style={{ fontWeight: 600, color: 'var(--color-text-main)' }}>{author}</span>
                         </div>
                         <div className="flex items-center gap-xs" style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem' }}>
                             <Calendar size={16} />
@@ -60,9 +71,9 @@ const ArticleView = () => {
                 </div>
             </header>
 
-            {article.image && (
+            {image && (
                 <div style={{ marginBottom: 'var(--space-xl)' }}>
-                    <img src={article.image} alt={article.title} style={{ width: '100%', borderRadius: 'var(--radius-md)', maxHeight: '500px', objectFit: 'cover' }} />
+                    <img src={image} alt={article.title} style={{ width: '100%', borderRadius: 'var(--radius-md)', maxHeight: '500px', objectFit: 'cover' }} />
                     {article.imageCaption && <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '0.5rem', fontStyle: 'italic' }}>{article.imageCaption}</p>}
                 </div>
             )}

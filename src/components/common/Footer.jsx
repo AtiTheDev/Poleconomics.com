@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../data/translations';
 
 const Footer = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <footer style={{ backgroundColor: '#f0f0f0', borderTop: '1px solid var(--color-border)', padding: 'var(--space-xl) 0', marginTop: 'var(--space-2xl)' }}>
             <div className="container grid grid-cols-3 gap-lg">
@@ -13,22 +18,22 @@ const Footer = () => {
                         Objective, analytical, and educational.
                     </p>
                     <div style={{ fontSize: '0.8rem', color: '#888' }}>
-                        © {new Date().getFullYear()} Poleconomics. All rights reserved.
+                        © {new Date().getFullYear()} Poleconomics. {t.rightsReserved}
                     </div>
                 </div>
 
                 {/* Column 2: Quick Links */}
                 <div className="flex flex-col gap-md">
-                    <h4 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Explore</h4>
-                    <Link to="/" style={{ fontSize: '0.9rem' }}>Daily Briefings</Link>
-                    <Link to="/research" style={{ fontSize: '0.9rem' }}>Deep Dives & Studies</Link>
-                    <Link to="/about" style={{ fontSize: '0.9rem' }}>About Us</Link>
-                    <Link to="/contact" style={{ fontSize: '0.9rem' }}>Contact</Link>
+                    <h4 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{t.explore}</h4>
+                    <Link to="/" style={{ fontSize: '0.9rem' }}>{t.latestIntelligence}</Link>
+                    <Link to="/research" style={{ fontSize: '0.9rem' }}>{t.research}</Link>
+                    <Link to="/about" style={{ fontSize: '0.9rem' }}>{t.about}</Link>
+                    <Link to="/contact" style={{ fontSize: '0.9rem' }}>{t.contact}</Link>
                 </div>
 
                 {/* Column 3: Subscribe */}
                 <div>
-                    <h4 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Daily Briefing</h4>
+                    <h4 style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{t.dailyBriefing}</h4>
                     <p style={{ fontSize: '0.9rem', marginBottom: '1rem' }}>
                         Get the "Morning Brief" delivered to your inbox. 5 minutes, every day.
                     </p>
@@ -55,7 +60,7 @@ const Footer = () => {
                                 fontWeight: 600
                             }}
                         >
-                            Join
+                            {t.join}
                         </button>
                     </form>
                     <div style={{ marginTop: '2rem', borderTop: '1px solid #ddd', paddingTop: '1rem' }}>

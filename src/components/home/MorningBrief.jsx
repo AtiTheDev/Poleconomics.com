@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Coffee, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
+import { morningBriefData } from '../../data/mockData';
 
 const MorningBrief = () => {
+    const { language } = useLanguage();
+    const content = morningBriefData[language];
+
     return (
         <div style={{
             backgroundColor: '#f8f9fa',
@@ -15,18 +20,17 @@ const MorningBrief = () => {
             <div style={{ position: 'relative', zIndex: 2 }}>
                 <div className="flex items-center gap-sm" style={{ marginBottom: 'var(--space-md)' }}>
                     <Coffee size={24} color="var(--color-secondary)" />
-                    <h3 style={{ margin: 0, fontSize: '1.5rem' }}>The Morning Brief</h3>
+                    <h3 style={{ margin: 0, fontSize: '1.5rem' }}>{content.title}</h3>
                 </div>
 
                 <p style={{ fontSize: '1.1rem', maxWidth: '800px', marginBottom: 'var(--space-md)' }}>
-                    <strong>Good morning.</strong> US Treasury yields have hit a significantly high level, rattling global equity markets. Meanwhile, the Eurozone faces a deepening manufacturing contraction.
-                    Here's what you need to know in 5 minutes.
+                    {content.intro}
                 </p>
 
                 <ul style={{ paddingLeft: '1.5rem', marginBottom: 'var(--space-lg)' }}>
-                    <li style={{ marginBottom: '0.5rem' }}><strong>Bond Rout:</strong> 10-year Treasury yield breaches 5%, highest since 2007.</li>
-                    <li style={{ marginBottom: '0.5rem' }}><strong>ECB Stance:</strong> Lagarde signals rates will stay restrictive despite weak growth data.</li>
-                    <li style={{ marginBottom: '0.5rem' }}><strong>Oil Jitters:</strong> Brent crude stabilizes near $90/bbl on Middle East tensions.</li>
+                    {content.points.map((point, index) => (
+                        <li key={index} style={{ marginBottom: '0.5rem' }}>{point}</li>
+                    ))}
                 </ul>
 
                 <Link to="/research/morning-brief" style={{ textDecoration: 'none' }}>
@@ -42,7 +46,7 @@ const MorningBrief = () => {
                         fontWeight: 600,
                         cursor: 'pointer'
                     }}>
-                        Read Full Briefing <ArrowRight size={16} />
+                        {content.cta} <ArrowRight size={16} />
                     </button>
                 </Link>
             </div>

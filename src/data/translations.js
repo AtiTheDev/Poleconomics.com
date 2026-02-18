@@ -1,0 +1,50 @@
+export const translations = {
+    en: {
+        news: "News",
+        research: "Research",
+        about: "About",
+        subscribe: "Subscribe",
+        search: "Search",
+        latestIntelligence: "Latest Intelligence",
+        viewAll: "View All News",
+        featured: "Featured Story",
+        readMore: "Read More",
+        explore: "Explore",
+        contact: "Contact",
+        dailyBriefing: "Daily Briefing",
+        join: "Join",
+        rightsReserved: "All rights reserved."
+    },
+    ru: {
+        news: "Новости",
+        research: "Исследования",
+        about: "О нас",
+        subscribe: "Подписаться",
+        search: "Поиск",
+        latestIntelligence: "Последние новости",
+        viewAll: "Смотреть все",
+        featured: "Избранное",
+        readMore: "Читать далее",
+        explore: "Исследовать",
+        contact: "Контакты",
+        dailyBriefing: "Ежедневный брифинг",
+        join: "Присоединиться",
+        rightsReserved: "Все права защищены."
+    },
+    az: {
+        news: "Xəbərlər",
+        research: "Araşdırmalar",
+        about: "Haqqımızda",
+        subscribe: "Abunə ol",
+        search: "Axtarış",
+        latestIntelligence: "Son Kəşfiyyat",
+        viewAll: "Hamısına bax",
+        featured: "Seçilmiş",
+        readMore: "Daha çox oxu",
+        explore: "Kəşf et",
+        contact: "Əlaqə",
+        dailyBriefing: "Gündəlik Xülasə",
+        join: "Qoşul",
+        rightsReserved: "Bütün hüquqlar qorunur."
+    }
+};

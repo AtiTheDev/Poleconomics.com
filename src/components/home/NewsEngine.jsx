@@ -2,46 +2,55 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock } from 'lucide-react';
 import { newsItems } from '../../data/mockData';
+import { useLanguage } from '../../context/LanguageContext';
+import { translations } from '../../data/translations';
 
 const NewsEngine = () => {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     return (
         <div style={{ backgroundColor: 'white', padding: 'var(--space-lg)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)' }}>
             <div className="flex items-center justify-between" style={{ marginBottom: 'var(--space-md)', paddingBottom: 'var(--space-sm)', borderBottom: '2px solid var(--color-secondary)' }}>
                 <h3 style={{ margin: 0, fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                    Latest Intelligence
+                    {t.latestIntelligence}
                 </h3>
                 <span style={{ fontSize: '0.8rem', color: 'var(--color-secondary)', fontWeight: 700, animation: 'pulse 2s infinite' }}>&#9679; LIVE</span>
             </div>
 
             <div className="news-feed flex flex-col" style={{ gap: 'var(--space-md)' }}>
-                {newsItems.map((item) => (
-                    <div key={item.id} className="news-item" style={{ borderBottom: '1px solid #eee', paddingBottom: 'var(--space-sm)' }}>
-                        <div className="flex items-center justify-between" style={{ marginBottom: '0.25rem' }}>
-                            <span style={{
-                                fontSize: '0.7rem',
-                                fontWeight: 700,
-                                color: 'white',
-                                backgroundColor: 'var(--color-text-muted)',
-                                padding: '2px 6px',
-                                borderRadius: '2px'
-                            }}>
-                                {item.category}
-                            </span>
-                            <div className="flex items-center gap-xs" style={{ fontSize: '0.75rem', color: '#888' }}>
-                                <Clock size={12} /> {item.time}
+                {newsItems.slice(0, 3).map((item) => {
+                    const content = item[language];
+                    return (
+                        <div key={item.id} className="news-item" style={{ borderBottom: '1px solid #eee', paddingBottom: 'var(--space-sm)' }}>
+                            <div className="flex items-center justify-between" style={{ marginBottom: '0.25rem' }}>
+                                <span style={{
+                                    fontSize: '0.7rem',
+                                    fontWeight: 700,
+                                    color: 'white',
+                                    backgroundColor: 'var(--color-text-muted)',
+                                    padding: '2px 6px',
+                                    borderRadius: '2px'
+                                }}>
+                                    {content.category}
+                                </span>
+                                <div className="flex items-center gap-xs" style={{ fontSize: '0.75rem', color: '#888' }}>
+                                    <Clock size={12} /> {content.time}
+                                </div>
                             </div>
+                            <h4 style={{ fontSize: '1rem', fontFamily: 'var(--font-sans)', fontWeight: 600, margin: '0 0 0.5rem 0' }}>
+                                <Link to={`/research/${item.id}`} style={{ color: 'var(--color-text-main)', textDecoration: 'none' }}>{content.title}</Link>
+                            </h4>
+                            <p style={{ fontSize: '0.9rem', color: '#555', margin: 0, lineHeight: 1.4 }}>
+                                {content.summary}
+                            </p>
                         </div>
-                        <h4 style={{ fontSize: '1rem', fontFamily: 'var(--font-sans)', fontWeight: 600, margin: '0 0 0.5rem 0' }}>
-                            <Link to={`/research/${item.id}`} style={{ color: 'var(--color-text-main)', textDecoration: 'none' }}>{item.title}</Link>
-                        </h4>
-                        <p style={{ fontSize: '0.9rem', color: '#555', margin: 0, lineHeight: 1.4 }}>
-                            {item.summary}
-                        </p>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
 
-            <button style={{
+            <Link to="/news" style={{
+                display: 'block',
                 width: '100%',
                 marginTop: 'var(--space-md)',
                 padding: '0.75rem',
@@ -49,10 +58,13 @@ const NewsEngine = () => {
                 border: '1px solid #eee',
                 color: 'var(--color-primary)',
                 fontWeight: 600,
-                fontSize: '0.9rem'
+                fontSize: '0.9rem',
+                textAlign: 'center',
+                textDecoration: 'none',
+                cursor: 'pointer'
             }}>
-                View All News
-            </button>
+                {t.viewAll}
+            </Link>
 
             <style>{`
         @keyframes pulse {

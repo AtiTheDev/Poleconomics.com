@@ -1,240 +1,255 @@
-export const featuredStory = {
-    id: 1,
-    title: "Election Impacts on Markets",
-    summary: "Analyze how political elections affect financial markets and investor confidence. Historical data suggests volatility spikes in the month preceding major polls, but long-term trends often remain driven by fundamentals.",
-    category: "Political Economy",
-    image: "https://images.unsplash.com/photo-1571609549239-bf07fb79f702?q=80&w=2070&auto=format&fit=crop",
+import downloadImg from '../assets/images/download.jpg';
+import newsUpdateImg from '../assets/images/news-update.png';
+
+const featuredStoryData = {
+    id: 'story-hydrogen',
+    image: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?q=80&w=2070&auto=format&fit=crop",
     author: "Poleconomics Team",
-    date: "Feb 10, 2026",
-    fullText: `
-    **Election Impacts on Financial Markets**
-
-    As the election cycle heats up, investors are keenly watching the polls. Historical data suggests that volatility tends to spike in the month preceding major elections. However, long-term market trends are often more influenced by economic fundamentals than political outcomes.
-
-    **Key Sectors to Watch**
-    
-    Energy, healthcare, and financials are typically the most sensitive to policy changes. Our analysis looks at past election cycles to predict potential winners and losers in the coming months.
-
-    **Investor Sentiment**
-
-    Market sentiment is currently cautious, with many investors sitting on the sidelines until a clearer picture emerges. We recommend a diversified portfolio to hedge against political uncertainty.
-    `
+    en: {
+        title: "The Green Hydrogen Boom: Reshaping Global Energy",
+        summary: "Green hydrogen production costs have finally undercut fossil-fuel derived hydrogen at $1.20/kg, triggering a global infrastructure race.",
+        category: "Energy Economics",
+        date: "Feb 18, 2026",
+        fullText: "The Hydrogen Economy Takes Flight..."
+    },
+    ru: {
+        title: "Бум зеленого водорода: Перестройка мировой энергетики",
+        summary: "Затраты на производство зеленого водорода наконец упали ниже водорода из ископаемого топлива до $1.20/кг.",
+        category: "Энергетическая экономика",
+        date: "18 фев 2026",
+        fullText: "Водородная экономика взлетает..."
+    },
+    az: {
+        title: "Yaşıl Hidrogen Bumu: Qlobal Enerjinin Yenidən Formalaşdırılması",
+        summary: "Yaşıl hidrogen istehsalı xərcləri nəhayət 1.20$/kq səviyyəsinə düşərək qalıq yanacaqlardan alınan hidrogeni üstələdi.",
+        category: "Enerji İqtisadiyyatı",
+        date: "18 Fev 2026",
+        fullText: "Hidrogen İqtisadiyyatı Yüksəlir..."
+    }
 };
 
-export const secondaryStory = {
-    id: 2,
-    title: "Economic Inequality",
-    summary: "Examine the causes and effects of wealth disparity in societies. From tax policy to educational access, we deconstruct the drivers of the Gini coefficient.",
-    category: "Social Economics",
-    image: "https://images.unsplash.com/photo-1605218427306-633ba87c9711?q=80&w=2069&auto=format&fit=crop",
+export const featuredStory = featuredStoryData;
+
+const secondaryStoryData = {
+    id: 'story-cities',
+    image: newsUpdateImg,
     author: "Poleconomics Team",
-    date: "Feb 08, 2026",
-    fullText: `
-    **Deconstructing Economic Inequality**
-
-    Wealth disparity remains a critical issue in modern economics. This article examines the drivers of the Gini coefficient, from tax policy to educational access.
-
-    **The Role of Education**
-    
-    Access to quality education is one of the most significant factors in economic mobility. We analyze data from OECD countries to show the correlation between educational investment and income equality.
-
-    **Policy Recommendations**
-
-    We propose a multi-faceted approach to addressing inequality, including progressive taxation, investment in public services, and labor market reforms.
-    `
+    en: {
+        title: "Urbanization 2.0: Smart Cities and Social Equity",
+        summary: "How new smart city initiatives are prioritizing inclusivity alongside efficiency.",
+        category: "Social Economics",
+        date: "Feb 15, 2026",
+        fullText: "Beyond Efficiency..."
+    },
+    ru: {
+        title: "Урбанизация 2.0: Умные города и социальное равенство",
+        summary: "Как новые инициативы умных городов ставят во главу угла инклюзивность наряду с эффективностью.",
+        category: "Социальная экономика",
+        date: "15 фев 2026",
+        fullText: "За пределами эффективности..."
+    },
+    az: {
+        title: "Urbanizasiya 2.0: Ağıllı Şəhərlər və Sosial Ədalət",
+        summary: "Yeni ağıllı şəhər təşəbbüsləri səmərəliliklə yanaşı inklüzivliyi necə prioritetləşdirir.",
+        category: "Sosial İqtisadiyyat",
+        date: "15 Fev 2026",
+        fullText: "Səmərəlilikdən Kənar..."
+    }
 };
+
+export const secondaryStory = secondaryStoryData;
 
 export const newsItems = [
     {
-        id: 1,
-        title: "Global Markets React to New Trade Sanctions",
-        time: "45 min ago",
-        category: "Global Trade",
-        summary: "New tariffs on semiconductor exports have triggered a sell-off in tech stocks."
+        id: 'news-ai',
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
+        en: {
+            title: "Geneva Accord on AI Safety Signed",
+            time: "1 hour ago",
+            category: "Technology",
+            summary: "World leaders agree on a binding framework for AGI development.",
+            fullText: "Historic Agreement in Geneva..."
+        },
+        ru: {
+            title: "Подписано Женевское соглашение о безопасности ИИ",
+            time: "1 час назад",
+            category: "Технологии",
+            summary: "Мировые лидеры договорились об обязательных рамках для разработки общего ИИ.",
+            fullText: "Историческое соглашение в Женеве..."
+        },
+        az: {
+            title: "Süni İntellekt Təhlükəsizliyi üzrə Cenevrə Razılaşması İmzalandı",
+            time: "1 saat əvvəl",
+            category: "Texnologiya",
+            summary: "Dünya liderləri AGI inkişafı üçün məcburi çərçivə barədə razılığa gəldilər.",
+            fullText: "Cenevrədə Tarixi Razılaşma..."
+        }
     },
     {
-        id: 2,
-        title: "Central Bank Digital Currency Pilot Launches",
-        time: "2 hours ago",
-        category: "Monetary Policy",
-        summary: "The digital Euro project enters its final testing phase with retail banks."
-    },
-    {
-        id: 3,
-        title: "Inflation Data Beats Expectations",
-        time: "4 hours ago",
-        category: "Macroeconomics",
-        summary: "Consumer prices rose 0.2% less than forecasted, fueling rate cut hopes."
+        id: 'news-rare-earth',
+        image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop",
+        en: {
+            title: "Massive Rare Earth Deposit Found in Scandinavia",
+            time: "3 hours ago",
+            category: "Commodities",
+            summary: "Discovery of 50 million tonnes deposit boosts EU tech independence.",
+            fullText: "Europe's Critical Mineral Breakthrough..."
+        },
+        ru: {
+            title: "В Скандинавии обнаружено огромное месторождение редкоземельных металлов",
+            time: "3 часа назад",
+            category: "Товары",
+            summary: "Открытие месторождения в 50 млн тонн укрепляет технологическую независимость ЕС.",
+            fullText: "Прорыв Европы в критических минералах..."
+        },
+        az: {
+            title: "Skandinaviyada Böyük Nadir Torpaq Yatağı Tapıldı",
+            time: "3 saat əvvəl",
+            category: "Əmtəələr",
+            summary: "50 milyon tonluq yatağın kəşfi Aİ-nin texnoloji müstəqilliyini artırır.",
+            fullText: "Avropanın Kritik Mineral Kəşfi..."
+        }
     }
 ];
 
 export const voicesArticles = [
     {
-        id: 101,
-        title: "The Future of Work in a Digital Economy",
-        summary: "In this contribution, a leading economist discusses the transformational changes in the workplace brought about by digital technologies. The article outlines the benefits and challenges of remote work, automation, and the gig economy.",
-        tags: ["Labor Economics", "Digital Transformation"],
+        id: 'voice-work-future',
+        image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop",
         author: "Leading Economist",
-        date: "Feb 2026",
-        readTime: "10 min read",
-        image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 102,
-        title: "Policy Responses to Economic Crises",
-        summary: "A seasoned policy analyst shares their perspective on effective strategies for handling economic downturns. This article covers historical examples of successful policy interventions and lessons learned from past crises.",
-        tags: ["Fiscal Policy", "Crisis Management"],
-        author: "Seasoned Policy Analyst",
-        date: "Jan 2026",
-        readTime: "15 min read",
-        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 103,
-        title: "Sustainable Development Goals and Economic Growth",
-        summary: "An environmental economist explores the relationship between sustainable development goals and economic growth. This piece examines how countries can achieve economic prosperity while addressing environmental challenges.",
-        tags: ["Sustainability", "Development"],
-        author: "Environmental Economist",
-        date: "Jan 2026",
-        readTime: "12 min read",
-        image: "https://images.unsplash.com/photo-1542601906990-b4d3fb7d5a09?q=80&w=2074&auto=format&fit=crop"
-    },
-    {
-        id: 104,
-        title: "The impact of economic sanctions on Russian people",
-        summary: "According to the Council on Foreign Relations, 'Economic sanctions are defined as the withdrawal of customary trade and financial relations for foreign- and security-policy purposes.', economic sanctions are financial and commercial penalties applied by one or more countries against a targeted country, group, or individual. Economic sanctions are imposed with the goal to achieve foreign policy objectives and prevent conflicts from arising. Sanctions are only forced upon the aggressor if they have violated perceived international norms. They can range from embargoes to more targeted restrictions, such as trade bans, asset freezes, and travel restrictions.\n\nJoseph Nye, the former US Assistant Secretary of Defence for International Security Affairs who co-founded the theory of neoliberalism in international relations, once said that 'Power is the ability to influence the behaviour of others to get the outcomes one wants.' Power did not mean using only force, but also meant using persuasion, incentives, and specific psychological methods to change the behaviour of opposing states. So, to divide power into different categories, Joseph Nye created a diagram that illustrates a spectrum ranging from 'hard' to 'soft' methods.",
-        tags: ["Geopolitics", "Sanctions"],
-        author: "Irada Hasanli",
-        date: "Jan 2026",
-        readTime: "20 min read",
-        image: "https://images.unsplash.com/photo-1565514020125-61266b746fb9?q=80&w=2070&auto=format&fit=crop",
-        downloadLink: "/src/assets/docs/IRAHAS_EE.docx"
+        en: {
+            title: "The Future of Work in a Digital Economy",
+            summary: "A leading economist discusses transformational changes in the workplace.",
+            tags: ["Labor Economics", "Digital Transformation"],
+            date: "Feb 2026",
+            readTime: "10 min read",
+            fullText: "The Digital Transformation of Labor..."
+        },
+        ru: {
+            title: "Будущее работы в цифровой экономике",
+            summary: "Ведущий экономист обсуждает трансформационные изменения на рабочем месте.",
+            tags: ["Экономика труда", "Цифровая трансформация"],
+            date: "Фев 2026",
+            readTime: "10 мин чтения",
+            fullText: "Цифровая трансформация труда..."
+        },
+        az: {
+            title: "Rəqəmsal İqtisadiyyatda İşin Gələcəyi",
+            summary: "Aparıcı iqtisadçı iş yerindəki transformasiya dəyişikliklərini müzakirə edir.",
+            tags: ["Əmək İqtisadiyyatı", "Rəqəmsal Transformasiya"],
+            date: "Fev 2026",
+            readTime: "10 dəq oxuma",
+            fullText: "Əməyin Rəqəmsal Transformasiyası..."
+        }
     }
 ];
 
 export const systemsArticles = [
     {
-        id: 201,
-        title: "Understanding Fiscal Policies",
-        date: "January 24, 2026",
-        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 202,
-        title: "The Basics of Economic Theories",
-        date: "January 20, 2026",
-        image: "https://images.unsplash.com/photo-1611974765215-02792d1372a9?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 203,
-        title: "Navigating the Electoral Process",
-        date: "January 15, 2026",
-        image: "https://images.unsplash.com/photo-1540910419868-4749459ca6c8?q=80&w=2073&auto=format&fit=crop"
+        id: 'sys-fiscal',
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop",
+        en: { title: "Understanding Fiscal Policies", date: "January 24, 2026" },
+        ru: { title: "Понимание фискальной политики", date: "24 января 2026" },
+        az: { title: "Fiskal Siyasətlərin Anlaşılması", date: "24 Yanvar 2026" }
     }
 ];
 
 export const resources = [
     {
         id: 301,
-        title: "International Monetary Fund (IMF)",
-        description: "The IMF provides a wealth of information on global economic stability, financial assistance, and policy advice. Their resources include reports, data sets, and research tools.",
         image: "https://images.unsplash.com/photo-1580519542721-db7794aa64ac?q=80&w=2070&auto=format&fit=crop",
-        link: "https://www.imf.org"
-    },
+        link: "https://www.imf.org",
+        en: { title: "International Monetary Fund (IMF)", description: "The IMF provides a wealth of information on global economic stability." },
+        ru: { title: "Международный валютный фонд (МВФ)", description: "МВФ предоставляет массу информации о мировой экономической стабильности." },
+        az: { title: "Beynəlxalq Valyuta Fondu (BVF)", description: "BVF qlobal iqtisadi sabitlik haqqında zəngin məlumat verir." }
+    }
+];
+
+export const researchPapers = [
     {
-        id: 302,
-        title: "The Brookings Institution",
-        description: "A nonprofit public policy organization, Brookings offers in-depth research and analysis on various political and economic issues. Their publications cover a wide range of topics.",
-        image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop",
-        link: "https://www.brookings.edu"
-    },
-    {
-        id: 303,
-        title: "World Bank Data",
-        description: "Access a vast repository of data from the World Bank, which provides insights into global development challenges. This resource is crucial for understanding economic trends.",
-        image: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=2070&auto=format&fit=crop",
-        link: "https://data.worldbank.org"
+        id: 'news-dasa-crypto',
+        image: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q=80&w=2070&auto=format&fit=crop",
+        author: "Editorial Team",
+        en: {
+            title: "Market Monitor: Digital Asset Stability Act",
+            summary: "Global markets react to the new unified crypto regulatory framework.",
+            tags: ["Market Intelligence", "Daily Brief"],
+            date: "Today",
+            readTime: "5 min read",
+            fullText: "Crypto Markets Maturing..."
+        },
+        ru: {
+            title: "Мониторинг рынка: Закон о стабильности цифровых активов",
+            summary: "Мировые рынки реагируют на новые единые рамки регулирования криптовалют.",
+            tags: ["Рыночная разведка", "Ежедневный брифинг"],
+            date: "Сегодня",
+            readTime: "5 мин чтения",
+            fullText: "Крипторынки взрослеют..."
+        },
+        az: {
+            title: "Bazar Monitorinqi: Rəqəmsal Aktivlərin Sabitliyi Aktı",
+            summary: "Qlobal bazarlar yeni vahid kripto tənzimləmə çərçivəsinə reaksiya verir.",
+            tags: ["Bazar Kəşfiyyatı", "Gündəlik Xülasə"],
+            date: "Bu gün",
+            readTime: "5 dəq oxuma",
+            fullText: "Kripto Bazarları Yetkinləşir..."
+        }
     }
 ];
 
 export const pollData = {
-    question: "Will the new trade sanctions lead to a global recession?",
-    options: [
-        { id: 'a', label: "Yes, supply chains will break", votes: 45 },
-        { id: 'b', label: "No, markets will adapt", votes: 55 }
-    ]
+    en: {
+        question: "Will the new trade sanctions lead to a global recession?",
+        options: [
+            { id: 'a', label: "Yes, supply chains will break", votes: 45 },
+            { id: 'b', label: "No, markets will adapt", votes: 55 }
+        ]
+    },
+    ru: {
+        question: "Приведут ли новые торговые санкции к глобальной рецессии?",
+        options: [
+            { id: 'a', label: "Да, цепочки поставок разорвутся", votes: 45 },
+            { id: 'b', label: "Нет, рынки адаптируются", votes: 55 }
+        ]
+    },
+    az: {
+        question: "Yeni ticarət sanksiyaları qlobal tənəzzülə səbəb olacaqmı?",
+        options: [
+            { id: 'a', label: "Bəli, təchizat zəncirləri qırılacaq", votes: 45 },
+            { id: 'b', label: "Xeyr, bazarlar uyğunlaşacaq", votes: 55 }
+        ]
+    }
 };
 
-export const researchPapers = [
-    {
-        id: 'morning-brief',
-        title: "Morning Brief: Global Markets Rattle",
-        summary: "US Treasury yields have hit a significantly high level, rattling global equity markets. Meanwhile, the Eurozone faces a deepening manufacturing contraction.",
-        tags: ["Market Intelligence", "Daily Brief"],
-        author: "Editorial Team",
-        date: "Today",
-        readTime: "5 min read",
-        fullText: `
-        **Global Markets Rattle as US Treasury Yields Surge**
-
-        US Treasury yields have hit a significantly high level, breaching 5% on the 10-year note for the first time since 2007. This surge has sent shockwaves through global equity markets, as higher yields reduce the attractiveness of stocks and increase borrowing costs for businesses and consumers alike.
-
-        **Eurozone Manufacturing Contraction Deepens**
-        
-        Meanwhile, in Europe, the latest PMI data suggests a deepening contraction in the manufacturing sector. Germany, the continent's industrial powerhouse, is showing signs of prolonged weakness, raising fears of a recession in the Eurozone.
-
-        **Oil Markets remain Volatile**
-        
-        Brent crude prices have stabilized near $90/bbl, but traders remain on edge due to escalating tensions in the Middle East. Any disruption to supply routes could send prices soaring again, complicating central banks' fight against inflation.
-        `,
-        image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?q=80&w=2070&auto=format&fit=crop"
+export const morningBriefData = {
+    en: {
+        title: "The Morning Brief",
+        intro: "Good morning. US Treasury yields have hit a significantly high level, rattling global equity markets. Meanwhile, the Eurozone faces a deepening manufacturing contraction. Here's what you need to know in 5 minutes.",
+        points: [
+            "Bond Rout: 10-year Treasury yield breaches 5%, highest since 2007.",
+            "ECB Stance: Lagarde signals rates will stay restrictive despite weak growth data.",
+            "Oil Jitters: Brent crude stabilizes near $90/bbl on Middle East tensions."
+        ],
+        cta: "Read Full Briefing"
     },
-    {
-        id: 'ee-irada',
-        title: "The Impact of Economic Sanctions on Russian People",
-        summary: "An in-depth analysis of how international sanctions have affected the daily lives, economy, and political landscape of Russia.",
-        tags: ["Geopolitics", "Sanctions"],
-        author: "Irada Hasanli",
-        date: "Jan 2026",
-        readTime: "20 min read",
-        image: "https://images.unsplash.com/photo-1565514020125-61266b746fb9?q=80&w=2070&auto=format&fit=crop",
-        fullText: `From the numbers given in figure 8, it can be confidently concluded that Russia's energy exports have been shifted towards Asian markets, particularly China and India as a result of Western sanctions continuing to restrict trade between Russia and Europe. In coal exports, China buys almost 46% of total exports. India follows with 17% by buying discounted Russian coal to support its growing energy demands thanks to their huge population. This shows their close economic ties with Russia for both countries. Turkey, even though accounting for only 11% is a crucial customer as they also export the Russian non-renewable resources worldwide. Similarly with crude oil, China and India together make up a huge percentage of 84% of Russian exports, purchasing 47% and India 37% respectively.
-        
-        While Asian countries take the lead in coal and crude oil purchases, Europe’s reliance on Russia for other energy forms is still visible from figure 8. The EU remains the largest buyer of Russia’s liquefied natural gas (LNG), accounting for 48% of exports, and still imports 40% of Russia’s pipeline gas. These trends demonstrate Russia’s strategic turn of energy trade towards non-Western markets, with countries like China, India, and Turkey, helping Russia’s economy survive. This independence from Western countries also shows that Russia is far better without US and European governments money thanks to the strengthened economic bonds between Asian nations and Russia.
-        
-        Conclusion
-        To conclude, economic sanctions have indeed had a huge impact on Russia’s economy. With Western countries observing the Ukrainian war unfold, more sanctions are imposed with the aim to create fluctuations in Russia’s economy. The sanctions are added with packages, targeting key sectors, such as banking, energy, and defense, and included asset freezes, trade restrictions, and prohibitions on luxury goods. The Russian ruble experienced a significant depreciation, which led to inflation, ultimately causing higher costs for everyday goods, and a decline in living standards for many citizens. Industries such as automobiles and oil refineries suffered from increased production costs and limited access to foreign markets. While these sanctions were designed to pressure the Russian government and reduce its capacity to wage war, they have also created economic instability, job losses, and social unrest for ordinary Russians.
-        
-        What’s more is that Russia’s Central Bank raising interest rates to quiet down inflation has further damaged the economy, making borrowing more expensive for both businesses and individuals. In a different perspective, western sanctions have significantly changed how Russia used to export energy. The sanctions have made Russia friendlier with non-Western countries, exposing the limitations of economic penalties. The recent shift toward Asian markets, particularly China and India, reflects Russia’s survival and adaptation skills to its current situation. The western world still depends on Russian LNG and pipeline gas, demonstrating how countries have their own interdependencies. To achieve peace in Ukraine, is to be able to effectively stop Russia from assaulting the Crimea region. This can only be achieved if the whole world agrees on cutting off Russia economically and politically, stripping them away from alternatives.`
+    ru: {
+        title: "Утренний брифинг",
+        intro: "Доброе утро. Доходность казначейских облигаций США достигла значительно высокого уровня, потрясая мировые рынки акций. Тем временем еврозона сталкивается с углубляющимся сокращением производства. Вот что вам нужно знать за 5 минут.",
+        points: [
+            "Обвал облигаций: Доходность 10-летних казначейских облигаций превысила 5%, самый высокий уровень с 2007 года.",
+            "Позиция ЕЦБ: Лагард сигнализирует, что ставки останутся ограничительными, несмотря на слабые данные о росте.",
+            "Нефтяная дрожь: Нефть марки Brent стабилизировалась около $90/барр. на фоне напряженности на Ближнем Востоке."
+        ],
+        cta: "Читать полный брифинг"
     },
-    {
-        id: 101,
-        title: "The Future of Work in a Digital Economy",
-        summary: "In this contribution, a leading economist discusses the transformational changes in the workplace brought about by digital technologies.",
-        tags: ["Labor Economics", "Digital Transformation"],
-        author: "Leading Economist",
-        date: "Feb 2026",
-        readTime: "10 min read",
-        fullText: "Full text content for The Future of Work... (Placeholder for demo purpose as full text wasn't provided)."
-    },
-    {
-        id: 102,
-        title: "Policy Responses to Economic Crises",
-        summary: "A seasoned policy analyst shares their perspective on effective strategies for handling economic downturns.",
-        tags: ["Fiscal Policy", "Crisis Management"],
-        author: "Seasoned Policy Analyst",
-        date: "Jan 2026",
-        readTime: "15 min read",
-        fullText: "Full text content for Policy Responses..."
-    },
-    {
-        id: 103,
-        title: "Sustainable Development Goals and Economic Growth",
-        summary: "An environmental economist explores the relationship between sustainable development goals and economic growth.",
-        tags: ["Sustainability", "Development"],
-        author: "Environmental Economist",
-        date: "Jan 2026",
-        readTime: "12 min read",
-        fullText: "Full text content for Sustainable Development..."
+    az: {
+        title: "Səhər Xülasəsi",
+        intro: "Sabahınız xeyir. ABŞ Xəzinə istiqrazlarının gəlirliliyi əhəmiyyətli dərəcədə yüksək səviyyəyə çataraq qlobal səhm bazarlarını sarsıtdı. Bu arada, Avrozona dərinləşən istehsalat azalması ilə üzləşir. 5 dəqiqə ərzində bilməli olduğunuz şeylər bunlardır.",
+        points: [
+            "İstiqraz Böhranı: 10 illik Xəzinə istiqrazlarının gəlirliliyi 5%-i keçdi, bu 2007-ci ildən bəri ən yüksək göstəricidir.",
+            "AMB-nin Mövqeyi: Laqard, zəif artım məlumatlarına baxmayaraq faizlərin məhdudlaşdırıcı qalacağını bildirir.",
+            "Neft Təşvişi: Brent markalı neft Yaxın Şərqdəki gərginlik fonunda 90$/barel ətrafında sabitləşdi."
+        ],
+        cta: "Tam Xülasəni Oxu"
     }
-];
+};

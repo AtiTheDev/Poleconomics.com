@@ -1,4 +1,5 @@
 import React from 'react';
+import downloadImg from '../assets/images/download.jpg';
 
 const About = () => {
     return (
@@ -47,7 +48,7 @@ const About = () => {
                     <div className="team-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--space-2xl)' }}>
                         <div className="team-member">
                             <div style={{ width: '200px', height: '250px', margin: '0 auto var(--space-md)', borderRadius: 'var(--radius-sm)', overflow: 'hidden' }}>
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Irada" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <img src={downloadImg} alt="Irada" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Irada Hasanli</h3>
                             <p style={{ fontSize: '0.95rem', lineHeight: 1.6, color: '#444' }}>
@@ -56,7 +57,7 @@ const About = () => {
                         </div>
                         <div className="team-member">
                             <div style={{ width: '200px', height: '250px', margin: '0 auto var(--space-md)', borderRadius: 'var(--radius-sm)', overflow: 'hidden' }}>
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="Atilla" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <img src={downloadImg} alt="Atilla" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
                             <h3 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Atilla Hasanli</h3>
                             <p style={{ fontSize: '0.95rem', lineHeight: 1.6, color: '#444' }}>
