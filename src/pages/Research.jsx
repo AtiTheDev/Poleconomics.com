@@ -1,14 +1,27 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import FilterBar from '../components/research/FilterBar';
 import ResearchGrid from '../components/research/ResearchGrid';
 import { researchPapers } from '../data/mockData';
 
 const Research = () => {
+    const { language } = useLanguage();
     const [activeCategory, setActiveCategory] = useState("All");
 
+    // Flatten the data based on current language
+    const localizedPapers = researchPapers.map(paper => {
+        const content = paper[language] || paper['en'];
+        return {
+            ...content,
+            id: paper.id,
+            author: paper.author,
+            image: paper.image
+        };
+    });
+
     const filteredPapers = activeCategory === "All"
-        ? researchPapers
-        : researchPapers.filter(paper => paper.tags.includes(activeCategory));
+        ? localizedPapers
+        : localizedPapers.filter(paper => paper.tags && paper.tags.includes(activeCategory));
 
     return (
         <div className="research-page container" style={{ padding: 'var(--space-xl) var(--space-md)' }}>

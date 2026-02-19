@@ -39,7 +39,7 @@ const ResearchGrid = ({ papers }) => {
                                 fontWeight: 700,
                                 letterSpacing: '0.5px'
                             }}>
-                                {paper.tags[0]}
+                                {paper.tags?.[0] || 'Research'}
                             </span>
                             <FileText size={18} color="var(--color-text-muted)" />
                         </div>
