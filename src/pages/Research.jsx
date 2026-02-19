@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import FilterBar from '../components/research/FilterBar';
 import ResearchGrid from '../components/research/ResearchGrid';
-import { researchPapers } from '../data/mockData';
+import { researchPapers, voicesArticles, systemsArticles } from '../data/mockData';
 
 const Research = () => {
     const { language } = useLanguage();
     const [activeCategory, setActiveCategory] = useState("All");
 
     // Flatten the data based on current language
-    const localizedPapers = researchPapers.map(paper => {
+    const allPapers = [...researchPapers, ...voicesArticles, ...systemsArticles];
+    const localizedPapers = allPapers.map(paper => {
         const content = paper[language] || paper['en'];
         return {
             ...content,
