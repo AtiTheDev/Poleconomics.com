@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { researchPapers, featuredStory, secondaryStory, voicesArticles, newsItems } from '../data/mockData';
+import { researchPapers, featuredStory, secondaryStory, voicesArticles, newsItems, systemsArticles } from '../data/mockData';
 import { ArrowLeft, Clock, User, Calendar } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -12,6 +12,7 @@ const ArticleView = () => {
     const allContent = [
         ...researchPapers,
         ...voicesArticles,
+        ...systemsArticles,
         ...newsItems,
         featuredStory,
         secondaryStory

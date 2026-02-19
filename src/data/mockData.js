@@ -257,6 +257,59 @@ Education systems are struggling to keep pace. The model of "front-loading" educ
             readTime: "10 dəq oxuma",
             fullText: "Əməyin Rəqəmsal Transformasiyası..."
         }
+    },
+    {
+        id: 'ee-irada',
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+        author: "Irada Hasanli",
+        en: {
+            title: "Energy Economics: A Framework for Sustainable Growth",
+            summary: "An extended essay exploring the intersection of energy policy and economic development.",
+            tags: ["Energy Economics", "Sustainability"],
+            date: "January 2026",
+            readTime: "20 min read",
+            fullText: `Energy Economics: A Framework for Sustainable Growth
+
+The relationship between energy consumption and economic growth has long been a central tenet of development economics. However, as the world confronts the existential threat of climate change, this relationship must be reimagined. This extended essay argues that the traditional model—where GDP growth correlates linearly with energy demand—is obsolete. Instead, we must pivot towards "energy decoupling," where economic value is generated through efficiency and innovation rather than resource extraction.
+
+The essay examines the "Energy Trilemma": the struggle to balance energy security, equity, and environmental sustainability. For developing nations, the challenge is particularly acute. They require affordable energy to lift populations out of poverty, yet they are often the most vulnerable to the impacts of climate change. The analysis suggests that leapfrogging fossil fuel infrastructure directly to renewables offers not just an environmental benefit, but a distinct economic advantage, bypassing the stranded assets that plague developed economies.
+
+Furthermore, the paper delves into the role of carbon pricing mechanisms. While theoretically sound, their implementation has been fraught with political difficulties. A global carbon floor price, tiered by development level, is proposed as the most equitable solution. This would prevent "carbon leakage" where industries relocate to jurisdictions with laxer regulations.
+
+Ultimately, the transition to a sustainable energy economy is not merely a technical challenge but a profound wealth redistribution mechanism. By decentralizing energy production through solar and wind, we can empower local communities and break the monopolies of centralized utilities. This "democratization of energy" is the unsung hero of the green transition, offering a pathway to a more resilient and equitable global economy.`
+        },
+        ru: {
+            title: "Энергетическая экономика: Рамки для устойчивого роста",
+            summary: "Расширенное эссе, исследующее пересечение энергетической политики и экономического развития.",
+            tags: ["Экономика энергетики", "Устойчивость"],
+            date: "Январь 2026",
+            readTime: "20 мин чтения",
+            fullText: `Энергетическая экономика: Рамки для устойчивого роста
+
+Взаимосвязь между потреблением энергии и экономическим ростом долгое время была центральным постулатом экономики развития. Однако по мере того как мир сталкивается с экзистенциальной угрозой изменения климата, эти отношения должны быть переосмыслены. В этом расширенном эссе утверждается, что традиционная модель, в которой рост ВВП линейно коррелирует со спросом на энергию, устарела. Вместо этого мы должны перейти к "энергетическому разделению", когда экономическая ценность создается за счет эффективности и инноваций, а не добычи ресурсов.
+
+В эссе рассматривается "Энергетическая трилемма": борьба за баланс между энергетической безопасностью, справедливостью и экологической устойчивостью. Для развивающихся стран эта проблема стоит особенно остро. Им нужна доступная энергия, чтобы вывести население из нищеты, но они часто наиболее уязвимы к последствиям изменения климата. Анализ показывает, что переход от инфраструктуры ископаемого топлива непосредственно к возобновляемым источникам энергии дает не только экологические преимущества, но и явное экономическое преимущество, минуя обесценивающиеся активы, которые преследуют развитые экономики.
+
+Кроме того, в документе рассматривается роль механизмов ценообразования на углерод. Хотя теоретически они обоснованы, их реализация сопряжена с политическими трудностями. Глобальная минимальная цена на углерод, дифференцированная по уровню развития, предлагается как наиболее справедливое решение. Это предотвратило бы "утечку углерода", когда отрасли перемещаются в юрисдикции с более мягкими правилами.
+
+В конечном счете, переход к устойчивой энергетической экономике — это не просто техническая задача, а глубокий механизм перераспределения богатства. Децентрализуя производство энергии с помощью солнца и ветра, мы можем расширить права и возможности местных сообществ и разрушить монополии централизованных коммунальных предприятий. Эта "демократизация энергии" является невоспетым героем зеленого перехода, предлагая путь к более устойчивой и справедливой глобальной экономике.`
+        },
+        az: {
+            title: "Enerji İqtisadiyyatı: Davamlı İnkişaf üçün Çərçivə",
+            summary: "Enerji siyasəti və iqtisadi inkişafın kəsişməsini araşdıran genişləndirilmiş esse.",
+            tags: ["Enerji İqtisadiyyatı", "Davamlılıq"],
+            date: "Yanvar 2026",
+            readTime: "20 dəq oxuma",
+            fullText: `Enerji İqtisadiyyatı: Davamlı İnkişaf üçün Çərçivə
+
+Enerji istehlakı ilə iqtisadi artım arasındakı əlaqə uzun müddətdir ki, inkişaf iqtisadiyyatının mərkəzi prinsipi olmuşdur. Bununla belə, dünya iqlim dəyişikliyinin ekzistensial təhlükəsi ilə üzləşdiyi bir vaxtda, bu əlaqə yenidən təsəvvür edilməlidir. Bu genişləndirilmiş esse iddia edir ki, ÜDM artımının enerji tələbatı ilə xətti əlaqədə olduğu ənənəvi model köhnəlmişdir. Bunun əvəzinə, biz "enerji ayrılmasına" doğru yönəlməliyik, burada iqtisadi dəyər resurs hasilatı ilə deyil, səmərəlilik və innovasiya yolu ilə yaradılır.
+
+Essedə "Enerji Trilemması" araşdırılır: enerji təhlükəsizliyi, ədalət və ekoloji davamlılıq arasında balans yaratmaq mübarizəsi. İnkişaf etməkdə olan ölkələr üçün bu problem xüsusilə kəskindir. Onların əhalini yoxsulluqdan çıxarmaq üçün əlverişli enerjiyə ehtiyacları var, lakin tez-tez iqlim dəyişikliyinin təsirlərinə qarşı ən həssas olanlar da onlardır. Təhlil göstərir ki, qalıq yanacaq infrastrukturundan birbaşa bərpa olunan enerjiyə keçid təkcə ekoloji fayda deyil, həm də inkişaf etmiş iqtisadiyyatları narahat edən itirilmiş aktivlərdən yan keçərək fərqli bir iqtisadi üstünlük təklif edir.
+
+Bundan əlavə, sənəd karbon qiymətləndirmə mexanizmlərinin rolunu araşdırır. Nəzəri cəhətdən əsaslı olsa da, onların həyata keçirilməsi siyasi çətinliklərlə dolu olmuşdur. İnkişaf səviyyəsinə görə təbəqələşdirilmiş qlobal karbon alt qiyməti ən ədalətli həll yolu kimi təklif edilir. Bu, sənayelərin daha yumşaq qaydalara malik yurisdiksiyalara köçdüyü "karbon sızmasının" qarşısını alacaq.
+
+Nəhayət, davamlı enerji iqtisadiyyatına keçid sadəcə texniki problem deyil, həm də dərin sərvət yenidən bölüşdürmə mexanizmidir. Günəş və külək vasitəsilə enerji istehsalını mərkəzsizləşdirməklə, biz yerli icmalara səlahiyyət verə bilərik və mərkəzləşdirilmiş kommunal xidmətlərin inhisarlarını qıra bilərik. Bu "enerjinin demokratikləşdirilməsi", daha dayanıqlı və ədalətli qlobal iqtisadiyyata yol açan yaşıl keçidin tərənnüm edilməmiş qəhrəmanıdır.`
+        }
     }
 ];
 
